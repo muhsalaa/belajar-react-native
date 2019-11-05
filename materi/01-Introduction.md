@@ -1,11 +1,12 @@
-<p align="center" style="color: teal; font-size: 25px">
+<h1 align="center">
+<a style="color: teal;">
     Mobile DevDay#1:<br>Pengenalan dan Instalasi React-Native 
-</p>
-<hr>
+</a>
+</h1>
 
 <p align="center">
-  <image src="https://i.ibb.co/svkxV27/logo-color.png" style="width: 200px"><br>
-  <strong>Komunitas Cipta Maya</strong><br>
-  Learn, Play, and Invent.<br>
+  <image src="https://i.ibb.co/Ss490SL/logo-color.png">
+  <image src="https://i.ibb.co/c6Gm061/logoreact.png">
 </p>
-<hr>
+
+<h1 align="center">Komunitas Cipta Maya: Learn, Play, and Invent!</h1>
