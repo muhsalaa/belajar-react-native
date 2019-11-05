@@ -18,3 +18,6 @@
 ## Apa itu React-Native?
 
 React-Native adalah _framework_ JavaScript untuk membuat aplikasi _mobile_ yang dapat digunakan diplatform seperti iOS atau Android. React-Native dikembangkan oleh Facebook untuk membuat aplikasi miliknya. Tidak seperti aplikasi webview, hasil dari _framework_ React-Native ini nantinya berupa _native code_ atau kode asli tiap platform. Hal ini menyebabkan performa dari aplikasi React-Native tidak berbeda jauh dari aplikasi _native_. berikut link menuju dokumentasi [I'm an inline-style link](https://www.google.com)
+
+## Aplikasi apa saja yang dibuat menggunakan React-Native?
+
