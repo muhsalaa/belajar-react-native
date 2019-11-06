@@ -156,7 +156,10 @@ $ react-native init helloWorld --version react-native@0.59.9
 $ cd helloWorld
 ```
 
-3. Siapkan emulator atau real device untuk menginstall aplikasi
+3. Siapkan emulator atau real device untuk menginstall aplikasi.
+    - untuk menggunakan emulator silahkan ikuti tutorial [ini](https://linuxhint.com/install_genymotion_android_emuator_ubuntu/)
+    - untuk menggunakan _real device_ atau smartphone android lebih mudah. masuk ke menu pengaturan di samrtphone mu dan pencet 7 kali pada opsi _Build Number_ , nanti akan muncul keterangan bahwa developer mode sudah diaktifkan. selanjutnya tinggal aktifkan _USB Debugging_ pada menu developer
+
 4. Memulai building aplikasi React-Native dengan menjalankan perintah berikut di root folder projek
 ```bash
 $ react-native start
@@ -171,7 +174,7 @@ $ react-native run-android
   <img src="https://facebook.github.io/react-native/docs/assets/GettingStartedAndroidSuccessWindows.png">
 </p>
 
-6. Silahkan bereksperimen madniri dengan membuka dokumentasi atau video tutorial lainya di youtube.
+6. Silahkan bereksperimen mandiri dengan membuka dokumentasi atau video tutorial lainya di youtube.
 
 <hr>
 
