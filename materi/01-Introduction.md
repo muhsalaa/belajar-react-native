@@ -49,6 +49,13 @@ $ curl -sL https://deb.nodesource.com/setup_10.17.0 | sudo -E bash - # download 
 
 $ sudo apt-get install -y nodejs # install nodejs
 ```
+
+###### Manjaro atau Arch Linux
+
+```bash
+$ sudo pacman -S nodejs
+```
+
 ## 2. Install NPM
 
 npm, short for Node Package Manager, is two things: first and foremost, it is an online repository for the publishing of open-source Node.js projects; second, it is a command-line utility for interacting with said repository that aids in package installation, version management, and dependency management. [[2]](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/)
@@ -56,6 +63,12 @@ npm, short for Node Package Manager, is two things: first and foremost, it is an
 jalankan perintah ini diterminal
 ```bash
 $ sudo npm install npm@latest -g # menginstall npm di secara global
+```
+
+###### Manjaro atau Arch Linux
+
+```bash
+$ sudo pacman -S npm
 ```
 
 ## 3. Install Java Development Kit (JDK)
@@ -73,6 +86,14 @@ Jalankan perintah ini untuk memulai instalasi
 ```bash
 $ sudo apt-get install openjdk-8-jdk
 ```
+
+###### Manjaro atau Arch Linux
+
+```bash
+OpenJDK 8 sudah terinstall secara default
+```
+
+######
 ## 4. Install Android Studio
 
 1. Download dan install Android Studio dari link [berikut](https://developer.android.com/studio/?gclid=Cj0KCQiA2ITuBRDkARIsAMK9Q7NRFAZTLLOugTuuIpx4C-YOJrVVpxsi3o8oL_MnqMUpr7Cjp3F0dQcaApKbEALw_wcB)
@@ -91,6 +112,14 @@ $ cd android-studio/bin # pindah ke direktori bin dalam android studio
 $ ./studio.sh # menjalankan bash script untuk instalasi 
 ```
 4. Ikuti petunjuk yang muncul sampai instalasi selesai
+
+###### Manjaro atau Arch Linux
+
+```bash
+$ sudo pacman -S yay
+
+$ yay -S android-studio # menginstall Android Studio terbaru
+```
 
 ## 5. Install Android System Development Kit (SDK)
 
