@@ -140,6 +140,41 @@ sudo npm install -g react-native-cli
 ```
 **Selamat kamu berhasil menginstall _environment_ React-Native di laptopmu** :tada: :tada: :tada: :tada:
 
+# Membuat aplikasi android pertama
+
+1. Buat folder baru bernama **apps** di home directory dan masuk ke folder tersebut
+```bash
+$ mkdir apps
+
+$ cd apps
+``` 
+
+2. Inisiasi project React-Native dengan versi 0.59.9, dan masuk folder projek. awali dengan jalankan perintah berikut
+```bash
+$ react-native init helloWorld --version react-native@0.59.9
+
+$ cd helloWorld
+```
+
+3. Siapkan emulator atau real device untuk menginstall aplikasi
+4. Memulai building aplikasi React-Native dengan menjalankan perintah berikut di root folder projek
+```bash
+$ react-native start
+
+# buka tab terminal baru (Ctrl+Shift+Tab) lalu jalankan kode berikut
+$ react-native run-android
+```
+
+5. Setelah selesai akan muncul halaman default React-Native.
+
+<p align="center">
+  <img src="https://facebook.github.io/react-native/docs/assets/GettingStartedAndroidSuccessWindows.png">
+</p>
+
+6. Silahkan bereksperimen madniri dengan membuka dokumentasi atau video tutorial lainya di youtube.
+
+<hr>
+
 # Referensi:
 [1 - https://linux4one.com/how-to-install-android-studio-in-linux/](https://linux4one.com/how-to-install-android-studio-in-linux/)
 
