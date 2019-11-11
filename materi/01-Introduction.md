@@ -1,7 +1,5 @@
 <h1 align="center">
-<a style="color: teal;">
-    Mobile DevDay#1:<br>Pengenalan dan Instalasi React-Native 
-</a>
+  Mobile DevDay#1:<br>Pengenalan dan Instalasi React-Native
 </h1>
 
 <p align="center">
