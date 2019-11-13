@@ -13,7 +13,27 @@
 
 :100: Setelah pertemuan ini selesai kamu akan mengetahui dasar-dasar bahasa pemrograman JavaScript mulai dari sejarah, _syntax_, _data types_, iterasi, dan hal lainya. Pada pertemuan ini kita juga akan melakukan latihan sederhana dengan menggunakan bahasa ini.
 
-## Apa itu JavaScript?
+# Table of Contents
+
+- [Apa itu JavaScript?](.#-apa-itu-javascript)
+- [:gear: bagaimana JavaScript Bekerja?](.#-bagaimana-javascript-bekerja?)
+
+JavaScript dasar :eyes:
+
+1. [Hello World :earth_asia:](.#1.-hello-world)
+2. [Code structure :wrench:](.#2.-code-structure)
+    - [Statements](.#2.a.-statements)
+    - [Semicolons](.#2.b.-semicolons)
+    - [Comments](.#2.c.-comments)
+3. [Variabel :bookmark:](.#3.-variabel)
+    - [Penamaan variabel](.#3.a.-penamaan-variabel)
+    - [_Keyword_ variabel](.#3.b.-keyword-variabel)
+4. [_Data Types_ / _Primitives_ :books:](.#4.-data-types-/-primitives)
+5. [Objects :cookie:](.#5.-objects)
+    - [Object](.#5.a.-object)
+    - [Array](.#5.b.-array)
+
+## :question: Apa itu JavaScript
 
 :tea: JavaScript adalah bahasa skrip yang digunakan untuk membuat tampilan website lebih hidup, melakukan perubahan terhadap web ataupun membuat fungsi-fungsi kompleks untuk sebuah web. Bisa dibilang JavaScript adalah bahasa yang menghidupi seluruh website yang ada.
 
@@ -37,9 +57,9 @@ Engine JavaScript independen dari browser yang ia tinggali (dalam kasus ini V8),
 
 # JavaScript Dasar :eyes:
 
-## 1. Hello World!
+## 1. Hello World! :earth_asia:
 
-Pada REPL tuliskan kode berikut
+Pada console tuliskan kode berikut
 
 ```javascript
 alert('Hello World');
@@ -47,7 +67,7 @@ alert('Hello World');
 console.log('Hello World');
 ```
 
-## 2. Code Structure
+## 2. Code Structure :wrench:
 
 ### 2.a. Statements
 
@@ -78,7 +98,7 @@ agar mudah dibaca dan efisien
 var a = 5; console.log('Multiline Comments')
 ```
 
-## 3. Variabel
+## 3. Variabel :bookmark:
 
 PS: gunakan REPL [ini](https://stephengrider.github.io/JSPlaygrounds/) untuk menulis dan melihat hasil kodemu
 
@@ -152,7 +172,7 @@ Untuk mendeklarasikan variabel, JavaScript memiliki beberapa keyword khusus, yai
 
 **var** merupakan _keyword_ yang paling awal dimiliki JvaScript, sedang **let** dan **const** baru muncul pada tahun 2015 bersamaan dengan keluarnya ECMAScript6 atau ES6
 
-## 4. _Data Types_ / _Primitives_
+## 4. _Data Types_ / _Primitives_ :books:
 
 JavaScript memiliki 5 (6 pada tahun 2015) tipe data primitif. data Primitif merupakan data yang tidak memiliki _methods_ sendiri dan juga _immutable_.
 
@@ -210,7 +230,7 @@ typeof katakata; // => undefined
 
 6. Symbol -> sesuatu yang tak akan pernah sama, [check this](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/)
 
-## 5. _Objects_
+## 5. _Objects_ :cookie:
 
 _Object_ juga merupakan tipe data tapi lebih kompleks daripada _primitives_. Ada 2 Objects yang paling umum yaitu:
 
