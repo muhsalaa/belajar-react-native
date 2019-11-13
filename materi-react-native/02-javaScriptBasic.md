@@ -23,12 +23,18 @@ JavaScript dasar :eyes:
 1. [Hello World :earth_asia:](#1-hello-world-earth_asia)
 2. [Code structure :wrench:](#2-code-structure-wrench)
     - [Statements](#2a-statements)
-    - [Semicolons](#2b.-semicolons)
+    - [Semicolons](#2b-semicolons)
     - [Comments](#2c-comments)
 3. [Variabel :bookmark:](#3-variabel-bookmark)
     - [Penamaan variabel](#3a-penamaan-variabel)
     - [_Keyword_ variabel](#3b-keyword-variabel)
 4. [_Data Types_ / _Primitives_ :books:](#4-data-types--primitives-books)
+    - [Number](#number)
+    - [Boolean](#boolean)
+    - [Undefined](#undefined)
+    - [Null](#null)
+    - [String](#string)
+    - [Symbol](#symbol)
 5. [Objects :cookie:](#5-objects-cookie)
     - [Object](#5a-object)
     - [Array](#5b-array)
@@ -176,7 +182,9 @@ Untuk mendeklarasikan variabel, JavaScript memiliki beberapa keyword khusus, yai
 
 JavaScript memiliki 5 (6 pada tahun 2015) tipe data primitif. data Primitif merupakan data yang tidak memiliki _methods_ sendiri dan juga _immutable_.
 
-1. Number -> termasuk integer, floats, dll
+### Number
+
+Seperti namanya, number adalah angka termasuk integer, floats, dll
 
 ```javascript
 let number = 2;
@@ -186,7 +194,9 @@ typeof infinity; // => number
 typeof NaN; // => number, Lol
 ```
 
-2. Boolean -> true or false
+### Boolean
+
+Boolean memiliki dua kondisi yaitu `True` dan `False` yang menyatakan kebenaran.
 
 ```javascript
 let benar = false;
@@ -195,7 +205,9 @@ typeof benar; // => boolean
 typeof true; // => boolean
 ```
 
-3. Undefined -> tidak terdefinisi alias ghaib
+### Undefined
+
+tidak terdefinisi alias ghaib. Undefined muncul di saat variabel baru saja di deklarasi namun belum memiliki value, Juga pada saat mengambil _value_ dari _object_ namun tidak ada _key_ yang sesuai. 
 
 ```javascript
 let ghoib;
@@ -204,7 +216,9 @@ typeof ghoib; // => undefined
 typeof undefined; // => undefined
 ```
 
-4. Null -> tidak memiliki nilai
+### Null
+
+tipe data yang menyimbolkan ketidak adaan nilai, atau kosong?
 
 ```javascript
 let hampa = null;
@@ -218,17 +232,25 @@ Sebuah analogi
   <img src="https://i.ibb.co/vktd3Zk/k-Yj-WGFhz-Sv-Y0-Fnwe7f7-Tok-Sk-Qiy-MD6-Gti06-ZEgf-Zy-Z0.jpg" alt="drawing" width="500"/>
 </p>
 
-5. String -> susunan karakter diapit tanda petik
+### String
+
+susunan karakter dengan berbagai tipe yang diapit oleh tanda petik
 
 ```javascript
 let kata = 'hai';
-let katakata = '12341';
+let katakata = '12343@#%56^#*1';
 
 typeof kata; // => string
-typeof katakata; // => undefined
+typeof katakata; // => string
+
+// escaping character
+kata = 'ayo Da\`wah';
+katakata = 'escaping escaper \\'
 ```
 
-6. Symbol -> sesuatu yang tak akan pernah sama, [check this](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/)
+### Symbol
+
+Symbol adalah tipe data baru yang muncul pada tahun 2015. Untuk lengkapnya, silahkan check link [ini](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/) untuk detail tentang symbol
 
 ## 5. _Objects_ :cookie:
 
@@ -316,7 +338,184 @@ let slicedArray = arr.slice(2, 4);
 console.log(slicedArray); // => ["world",34]
 ```
 
-https://github.com/denysdovhan/wtfjs
+## 6. _Operators_ :heavy_plus_sign:
+
+Javascript memiliki _operator_ seperti dalam bahasa lainya. Kita mengetahui beberapa operator matematika yang biasa digunakan sehari-hari seperti `+` penambahan, `-` pengurangan, `*` perkalian, dll. JavaScript memiliki 5 jenis operator yang masing-masing dapat dilihat dalam tabel dibawah:
+
+#### Terminologi: "unary", "binary", "operand"
+
+sebelum dilanjutkan, mari memahami beberapa terminologi berikut
+
+- _operand_ adalah nilai asal yang digunakan dalam proses operasi. misal `5 * 2` memiliki dua _operand_, _operand_ kiri angka `5` dan operand kanan angka `2`.
+
+- sebuah operator disebut _unary_ jika hanya punya satu operand, misal
+
+```javascript
+let x = 1;
+
+x = -x; // x = -1, aplikasi negasi unary
+```
+
+- operator disebut _binary_ jika punya 2 _operand_
+
+```javascript
+let x = 1, y = 2;
+
+let r = y - x; // r = 2, aplikasi pengurangan binary
+```
+
+### 6.a. Arithmatic Operator
+
+Operator aritmatika digunakan untuk melakukan operasi matematika anatara _operand_ numerik
+
+| Operator | Deskripsi |
+| ---- | ---- |
+| + | Menambahkan dua _operand_ numeric |
+| - | Mengurangi _operand_ kanan dari _operand_ kiri |
+| * | Mengalikan dua _operand_ numeric |
+| / | Membagi _operand_ kiri dengan _operand_ kanan |
+| % | [Modulus/ Modulo] mengembalikan hasil sisa bagi 2 _operand_ |
+| ++ | [Increment] menambahkan nilai _operand_ satu angka |
+| -- | [Decrement] Mengurangi _operand_ kanan dari _operand_ kiri |
+
+#### contoh penggunaan
+
+```javascript
+5 + 10; // => 15
+
+10 - 5; // => 5
+
+5 * 10; // => 50
+
+10 / 5; // => 2
+
+5 % 2; // => 1
+
+5++; // => 6
+
+5--; // => 4
+```
+
+### 6.b. Comparison Operator
+
+Operator perbandingan digunakan untuk membandingkan dua _operand_ dan menghasilkan nilai _boolean_
+
+| Operator | Deskripsi |
+| ---- | ---- |
+| == | Membandingkan dua _operand_ tanpa memandang tipe |
+| === | Membandingkan dua _operand_ dengan memandang tipe |
+| != | Mengecek ketidaksamaan antar _operand_ |
+| > | Mengecek apakah _operand_ kiri lebih besar dari kanan |
+| < | Mengecek apakah _operand_ kanan lebih besar dari kiri |
+| >= | Mengecek apakah _operand_ kiri lebih besar dari kanan atau sama |
+| <= | Mengecek apakah _operand_ kanan lebih besar dari kiri atau sama |
+
+#### contoh penggunaan
+
+```javascript
+5 == '5'; // => true
+
+5 === '5'; // => false
+
+5 == 5; // => true
+
+5 != 10; // => true
+
+5 > 10; // => false
+
+5 < 10; // => true
+
+5 >= 10; // => false
+
+5 <= 10; // => true
+
+5 >= '5'; // => true
+
+5 <= '5'; // => true
+```
+
+### 6.c. Logical Operator serta nilai _falsy_ dan _truthy_
+
+Operator logika digunakan untuk menggabungkan dua atau lebih kondisi, ia menghasilkan nilai `true` bila benar dan `false` bila salah
+
+untuk memahami lebih baik tentang operator logika kita harus mengetahui tentang **_falsy_** dan **_truthy_**
+
+- **_falsy_** adalah nilai kesalahan, mencakup:
+    -  `false`, nilai boolean false
+    - `0`, nol
+    - `''` atau `""`, string kosong
+    - `null`
+    - `undefined`
+    - `NaN`
+
+- **truthy** selain _falsy_ adalah nilai kebenaran, mencakup
+    - `true`
+    - `'0'`, string berisi angka 0
+    - `'false'`, string berisikan boolean false
+    - `[]`, array kosong
+    - `{}`, object kosong
+    - `function(){}`, fungsi kosong
+
+| Operator | Deskripsi |
+| ---- | ---- |
+| && | Disebut juga Operator AND. Ia memastikan apakah dua atau lebih _operand_ memiliki nilai **_truthy_**  |
+| \|\| | Disebut juga Operator OR. Jika hanya salah satu dari dua atau lebih _operand_ bernilai **_truthy_** menghasilkan nila `true` |
+| ! | Menegasi nilai kebenaran |
+
+#### contoh penggunaan
+
+```javascript
+(5 < 8) && (6 > 5); // => true
+
+(20 < 8) && (6 > 5); // => false
+
+(5 < 8) || (6 > 5); // => true
+
+(20 < 8) && (6 > 5); // => true
+
+(20 < 8) && (6 > 50); // => false
+
+!(6 < 8); // => false
+```
+
+### 6.d. Assignment Operator
+
+Operator penetapan digunakan untuk menginisialisasi nilai dari sebuah variabel
+
+| Operator | Deskripsi |
+| ---- | ---- |
+| = | Menetapkan nilai dari _operand_ kanan ke _operand_ kiri |
+| += | Menambahkan nilai kedua _operand_ secara langsung dan menjadikanya nilai _operand_ kanan |
+| -= | Mengurangkan nilai kedua _operand_ secara langsung dan menjadikanya nilai _operand_ kanan |
+| *= | Mengalikan nilai kedua _operand_ secara langsung dan menjadikanya nilai _operand_ kanan |
+| /= | Membagi nilai kedua _operand_ secara langsung dan menjadikanya nilai _operand_ kanan |
+| %= | Menjadikan hasil modulus sebgai nilai dari _operand_ kanan |
+
+#### contoh penggunaan
+
+```javascript
+let x = 5, y = 10, z = 15;
+
+x = y; //x menjadi 10
+
+x += 1; //x menjadi 6
+
+x -= 1; //x menjadi 4
+
+x *= 5; //x menjadi 25
+
+x /= 5; //x menjadi 1
+
+x %= 2; //x menjadi 1
+```
+
+### 6.e. Bitwise Operator
+
+Bitwise Operator merubah _operand_ menjadi susunan 32 bit (`0` dan `1`) kemudian membandingkanya, dan mengembalikan hasil berupa angka `1` jika benar dan `0` jika salah. Operator ini tidak terlalu sering digunakan, untuk melihat detail nya bisa membuka link [ini](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
+
+## 7. _Type Conversion_ dan _Type Coercion_
+
+
 
 # Referensi:
 [1 - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
