@@ -15,23 +15,23 @@
 
 # Table of Contents
 
-- [Apa itu JavaScript?](.#-apa-itu-javascript)
-- [:gear: bagaimana JavaScript Bekerja?](.#-bagaimana-javascript-bekerja?)
+- [Apa itu JavaScript?](#question-apa-itu-javascript)
+- [:gear: bagaimana JavaScript Bekerja?](#gear-bagaimana-javascript-bekerja)
 
 JavaScript dasar :eyes:
 
-1. [Hello World :earth_asia:](.#1.-hello-world)
-2. [Code structure :wrench:](.#2.-code-structure)
-    - [Statements](.#2.a.-statements)
-    - [Semicolons](.#2.b.-semicolons)
-    - [Comments](.#2.c.-comments)
-3. [Variabel :bookmark:](.#3.-variabel)
-    - [Penamaan variabel](.#3.a.-penamaan-variabel)
-    - [_Keyword_ variabel](.#3.b.-keyword-variabel)
-4. [_Data Types_ / _Primitives_ :books:](.#4.-data-types-/-primitives)
-5. [Objects :cookie:](.#5.-objects)
-    - [Object](.#5.a.-object)
-    - [Array](.#5.b.-array)
+1. [Hello World :earth_asia:](#1-hello-world-earth_asia)
+2. [Code structure :wrench:](#2-code-structure-wrench)
+    - [Statements](#2a-statements)
+    - [Semicolons](#2b.-semicolons)
+    - [Comments](#2c-comments)
+3. [Variabel :bookmark:](#3-variabel-bookmark)
+    - [Penamaan variabel](#3a-penamaan-variabel)
+    - [_Keyword_ variabel](#3b-keyword-variabel)
+4. [_Data Types_ / _Primitives_ :books:](#4-data-types--primitives-books)
+5. [Objects :cookie:](#5-objects-cookie)
+    - [Object](#5a-object)
+    - [Array](#5b-array)
 
 ## :question: Apa itu JavaScript
 
