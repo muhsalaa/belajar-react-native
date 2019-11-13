@@ -18,7 +18,7 @@
 - [Apa itu JavaScript?](#question-apa-itu-javascript)
 - [:gear: bagaimana JavaScript Bekerja?](#gear-bagaimana-javascript-bekerja)
 
-JavaScript dasar :eyes:
+<!-- JavaScript dasar :eyes: -->
 
 1. [Hello World :earth_asia:](#1-hello-world-earth_asia)
 2. [Code structure :wrench:](#2-code-structure-wrench)
@@ -38,6 +38,16 @@ JavaScript dasar :eyes:
 5. [Objects :cookie:](#5-objects-cookie)
     - [Object](#5a-object)
     - [Array](#5b-array)
+6. [Operators :heavy_plus_sign:](#6-operators-heavy_plus_sign)
+    - [Arithmatic Operator](#6a-arithmatic-operator)
+    - [Comparison Operator](#6b-comparison-operator)
+    - [Logical Operator](#6c-logical-operator-serta-nilai-falsy-dan-truthy)
+    - [Assignment Operator](#6d-assignment-operator)
+    - [Bitwise Operator](#6e-bitwise-operator)
+    - [Operator Prcedence](#operator-precedence)
+7. [_Type Conversion_ dan _Type Coercion_](#7-type-conversion-dan-type-coercion)
+
+- [Referensi](#referensi)
 
 ## :question: Apa itu JavaScript
 
@@ -513,8 +523,63 @@ x %= 2; //x menjadi 1
 
 Bitwise Operator merubah _operand_ menjadi susunan 32 bit (`0` dan `1`) kemudian membandingkanya, dan mengembalikan hasil berupa angka `1` jika benar dan `0` jika salah. Operator ini tidak terlalu sering digunakan, untuk melihat detail nya bisa membuka link [ini](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_Operators)
 
+### Operator Precedence
+
+_Operator Precedence_ adalah tingkat keutamaan dari sebuah operator untuk dieksekusi lebih dulu. lihat gambar
+
+<p align="center">
+  <img src="https://i.ibb.co/jVyYmZk/op-precedence.png" alt="drawing"/>
+</p>
+
 ## 7. _Type Conversion_ dan _Type Coercion_
 
+_Type Conversion_ adalah merubah tipe data suatu nilai menjadi tipe data yang lain
+
+```javascript
+let value = true;
+typeof value; // boolean
+
+value = String(value); // sekarang value adalah string
+typeof value; // string
+
+let str = "123";
+typeof str; // string
+
+let num = Number(str); // menjadi number 123
+
+typeof num; // number
+
+let age = Number("an arbitrary string instead of a number"); // => Error NaN
+
+Number("   123   ") // => 123
+Number("123z") // => NaN (error reading a number at "z")
+Number(true) // => 1
+Number(false) // => 0
+```
+
+_Type Coercion_ adalah berubahnya tipe data suatu nilai ketika dilakukan operasi menggunakan operator tertentu. coba tebak apa hasil dari berbagai operasi berikut
+
+```javascript
+true + false;
+
+12 / "6";
+
+"number" + 15 + 3;
+
+15 + 3 + "number";
+
+"foo" + + "bar";
+
+'12' * null;
+
+[] + 5;
+
+[] * '23'
+
+'1' + null;;
+
+('1' + null * 2 + 0) * 10
+```
 
 
 # Referensi:
