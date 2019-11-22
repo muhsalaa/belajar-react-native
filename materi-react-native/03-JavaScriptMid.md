@@ -17,6 +17,22 @@
 
 1. [_Conditional_ :first_quarter_moon:](#1-conditional)
     - [if, if else, if else if](#1a-if-if-else-if-else-if)
+    - [_Ternary Operator_](#1b-ternary-operator)
+    - [_Switch_](#1c-switch)
+2. [_Function_ :page_with_curl:](#2-function)
+    - [_Arrow function_](#2a-arrow-function)
+    - [_Pure function_](#2b-pure-function)
+    - [_Immediately invoked function expression_ (IIFE)](#2c-immediately-invoked-function-expression)
+3. [_Looping_ :fish_cake:](#3-looping)
+    - [_For loop_](#3a-for-loop)
+    - [_For/In loop_](#3b-forin-loop)
+    - [_For/of loop_](#3c-forof-loop)
+    - [_While loop_](#3d-while-loop)
+4. [_Hoisting_ dan _Closure_](#4-hoisting-dan-closure)
+    - [_Hoisting_](#4a-hoisting)
+    - [_Closure_](#4b-closure)
+5. [Asynchronous](#5-asynchronous)
+6. [Promises](#6-promises)
 
 ## 1. _Conditional_
 
@@ -371,3 +387,94 @@ myOtherContor(); // 11
 // myContor was not affected 
 myContor(); // 4
 ```
+
+## 5. _Asynchronous_
+
+Javascript adalah bahasa pemrograman _Single threaded_ yang berarti hanya satu hal yang dapat terjadi setiap waktu. Jika kita melakukan suatu eksekusi fungsi yang memerlukan waktu 10 menit, maka ia akan mengeluarkan hasilnya 10 menit kemudian, sedang kode yang lain sudah berjalan duluan. perhatikan kode berikut 
+
+```javascript
+const second = () => {
+  console.log('Hello there!');
+}
+
+const first = () => {
+  console.log('Hi there!');
+  second();
+  console.log('The End');
+}
+
+first(); // => 'Hi there', 'Hello there', 'The End'
+```
+
+kode diatas dapat ditebak hasilnya, yaitu semua akan dieksekusi berurutan. perhatikan diagram ini untuki memahami eksekusi kode di javascript.
+
+<p align="center">
+  <img src="https://miro.medium.com/max/1257/1*DkG1a8f7rdl0GxM0ly4P7w.png">
+</p>
+
+bandingkan dengan kode berikut
+
+```javascript
+const networkRequest = () => {
+  setTimeout(() => {
+    console.log('Async Code');
+  }, 2000);
+};
+console.log('Hello World');
+// kode ini akan mengeluarkan hasil 2 detik berikutnya. karena kita menggunakan fungsi setTimeout untuk pending
+networkRequest();
+console.log('The End');
+```
+
+perhatikan diagram berikut untuk memahami mengapa hal ini terjadi
+
+<p align="center">
+  <img src="https://miro.medium.com/max/842/1*sOz5cj-_Jjv23njWg_-uGA.gif">
+</p>
+```
+
+## 6. _Promises_
+
+Promise atau dalam bahasa Indonesia berarti janji, merupakan istilah dalam bahasa javascript dimana sebuah object yang dapat menghasilkan suatu keluaran pada suatu waktu dimasa depan.
+
+Ibaratkan seorang ibu yang berjanji pada anaknya, ia mengatakan akan membelikanya handphone minggu depan. Si anak tidak tahu dia akan mendapatkan handphone minggu depan, dia bisa saja tidak jadi membelikan handphone kalau anak itu nakal, atau handphone bagus kalau si anak baik.
+
+dari kisah diatas, janji dapat dibagi menjadi 3 bagian
+
+1. _Pending_, waktu sampai tenggat janji dilaksanakan
+2. _Fullfilled_ (terpenuhi), janji sang ibu ditunaikan karna si anak baik
+3. _Rejected_ (ditolak), ibu membatalkan janjinya, tidak memenuhi, karena si anak minggu itu nakal
+
+mari merubahnya jadi sebuah kode
+
+```javascript
+const isMomHappy = true;
+
+// Promise
+const willIGetNewPhone = new Promise(
+  function (resolve, reject) {
+    if (isMomHappy) {
+      const phone = {
+        brand: 'Samsung',
+        color: 'black'
+      };
+      resolve(phone); // sukses
+    } else {
+      const reason = new Error('mom is not happy');
+      reject(reason); // reject
+    }
+  }
+);
+
+willIGetNewPhone
+.then(resp => { console.log(resp)})
+.catch(err => { console.log(err)})
+```
+
+# Referensi
+
+[1 - https://www.w3schools.com/js/js_es5.asp](https://www.w3schools.com/js/js_es5.asp)
+
+[2 - https://scotch.io/tutorials/javascript-promises-for-dummies](https://scotch.io/tutorials/javascript-promises-for-dummies)
+
+[3 - https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff)
