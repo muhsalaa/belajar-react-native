@@ -15,14 +15,29 @@
 
 # Table of Contents
 
-1. [React Native CLI & Expo :first_quarter_moon:](#1-conditional)
+1. [React Native CLI & Expo :first_quarter_moon:](#1-react-native-cli--expo-first_quarter_moon)
     - [CLI](#1a-cli)
     - [_Expo_](#1b-expo)
-2. [Project Structure :construction_worker:](#2-project-structure)
-3. [JSX :ledger:](#3-jsx)
-4. [React Components :gear:](#4-react-components)
+2. [Project Structure :construction_worker:](#2-project-structure-construction_worker)
+3. [JSX :ledger:](#3-jsx-ledger)
+4. [React Components :gear:](#4-react-components-gear)
     - [_Functional Component_](#4a-functional-component)
     - [_Class Component_](#4b-class-component)
+5. [_State_ dan _Props_ :books:](#5-state-dan-props-books)
+    - [State](#5a-state)
+    - [Props](#5b-props)
+6. [React-Native Core component :seedling:](#6-react-native-core-component-seedling)
+7. [Component Lifecycle :alarm_clock:](#7-component-lifecycle-alarm_clock)
+8. [Flexbox :black_square_button:](#8-flexbox-black_square_button)
+    - [Flex sizing](#8a-flex-sizing)
+    - [flexDirection](#8b-flexdirection)
+    - [justifyContent](#8c-justifycontent)
+    - [alignItems](#8d-alignitems)
+    - [alignSelf](#8e-alignself)
+    - [flexWrap](#8f-flexwrap)
+    - [alignContent](#8g-aligncontent)
+    - [position](#8h-position)
+    - [zIndex](#8i-zindex)
 
 ## 1. React-Native CLI & Expo :first_quarter_moon:
 
@@ -308,7 +323,7 @@ const styles = {
   <image src="https://miro.medium.com/max/2462/1*PhCFmO5tYX_sZSyCd4vO3w.png">
 </p>
 
-## 8.b. Flex Direction
+## 8.b. flexDirection
 
 `flexDirection` membuat kita bisa memposisikan tiap komponen dalam container untuk mengikuti _main axis_ nya seperti gambar-gambar berikut
 
