@@ -48,7 +48,7 @@ $ curl -sL https://deb.nodesource.com/setup_10.17.0 | sudo -E bash - # download 
 $ sudo apt-get install -y nodejs # install nodejs
 ```
 
-###### Manjaro atau Arch Linux
+###### Manjaro Linux
 
 ```bash
 $ sudo pacman -S nodejs
@@ -63,7 +63,7 @@ jalankan perintah ini diterminal
 $ sudo npm install npm@latest -g # menginstall npm di secara global
 ```
 
-###### Manjaro atau Arch Linux
+###### Manjaro Linux
 
 ```bash
 $ sudo pacman -S npm
@@ -85,10 +85,10 @@ Jalankan perintah ini untuk memulai instalasi
 $ sudo apt-get install openjdk-8-jdk
 ```
 
-###### Manjaro atau Arch Linux
+###### Manjaro Linux
 
 ```bash
-OpenJDK 8 sudah terinstall secara default
+$ sudo pacman -S jdk8-openjdk
 ```
 
 ######
@@ -111,7 +111,7 @@ $ ./studio.sh # menjalankan bash script untuk instalasi
 ```
 4. Ikuti petunjuk yang muncul sampai instalasi selesai
 
-###### Manjaro atau Arch Linux
+###### Manjaro Linux
 
 ```bash
 $ sudo pacman -S yay
